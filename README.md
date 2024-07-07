@@ -9,9 +9,9 @@ To run this project, you can follow these instructions:
 
 where
 
-    `{your_repo}` - repo to be updated
-    `{module_name}` - npm module version to be updated
-    `{module_version}` - desired version of npm module
+    {your_repo} - repository where you want to update package.json
+    {module_name} - npm module whose version you want to upgrade
+    {module_version} - desired new version of npm module
 
 9. Update in `constants.js` file GitHub related constants for authentication.
 10. To run tests: `npm test`
