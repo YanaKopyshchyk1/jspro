@@ -15,9 +15,13 @@ export function getParams() {
         console.log(`No repo provided, using default repo: ${DEFAULT_REPO}`)
         params.repo = DEFAULT_REPO
     }
-
+    
     if (!module || !version) {
-        throw new Error("Please provide all required params: module, version");
+        throw new Error('Please provide all required params: module, version');
+    }
+
+    if (!/^[0-9.]+$/.test(version)) {
+        throw new Error('Version should only contain numbers and dots');
     }
 
     console.log('Input params:', params)
