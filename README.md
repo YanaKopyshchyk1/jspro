@@ -15,4 +15,4 @@ where
 
 9. Update in `constants.js` file GitHub related constants for authentication.
 10. To run tests: `npm test`
-11. <a href="https://github.com/YanaKopyshchyk1/nodejs-20220114_yana-kopyshchyk/pull/10">My example PR</a> created using script.
+11. <a href="https://github.com/YanaKopyshchyk1/nodejs-20220114_yana-kopyshchyk/pull/10">My example PR</a> created using this script.
