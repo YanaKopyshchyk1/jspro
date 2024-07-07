@@ -5,7 +5,7 @@ export const apiHeader = { 'X-GitHub-Api-Version': '2022-11-28' }
 export const jsonAcceptHeader = { 'Accept': 'application/vnd.github.raw+json' }
 export const headers = { ...apiHeader }
 
-// Replace below variables with your GitHub username and personal access token
+// Replace below variables with your GitHub username, email and personal access token
 // Owner is the username of the repository owner
 export const owner = 'github_username'
 export const committer = {
