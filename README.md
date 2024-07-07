@@ -1,9 +1,18 @@
 To run this project, you can follow these instructions:
 1. Make sure you have Node.js installed on your machine.
 2. Open a terminal or command prompt.
-3. Navigate to the root directory where the `index.js` file is located.
+3. Navigate to the root directory.
 4. Install the required dependencies by running the `npm install` command.
-5. Run the script by executing the following command: `node index.js repo={your_repo} module={module_name} version={module_version}`. You can skip the repo variable and my default repo <a href="https://github.com/YanaKopyshchyk1/nodejs-20220114_yana-kopyshchyk">nodejs-20220114_yana-kopyshchyk</a> will be used. For example, you can update `react` module version in it. 
-6. The script will then execute the logic defined in the code. It will check if the specified module version differs from the current repository version. If they are different, it will update the file, create a new branch, push the updated file to the branch, and create a pull request. If they are the same, it will print a message indicating that the module version is already up-to-date.
-For simplicity and test purposes, some variables in the code are hardcoded.
-7. You can see the created PR in my test repo using this script <a href="https://github.com/YanaKopyshchyk1/nodejs-20220114_yana-kopyshchyk/pull/8">here</a>.
+5. Run the script by executing the following command: 
+
+    `node index.js repo={your_repo} module={module_name} version={module_version}`,
+
+where
+
+    `{your_repo}` - repo to be updated
+    `{module_name}` - npm module version to be updated
+    `{module_version}` - desired version of npm module
+
+9. Update in `constants.js` file GitHub related constants for authentication.
+10. To run tests: `npm test`
+11. <a href="https://github.com/YanaKopyshchyk1/nodejs-20220114_yana-kopyshchyk/pull/10">My example PR</a> created using script.

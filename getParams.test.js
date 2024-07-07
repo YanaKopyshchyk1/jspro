@@ -20,4 +20,9 @@ describe('getParams', () => {
     expect(params.module).toBe('react')
     expect(params.version).toBe('19.0.0')
   })
+
+  it('should throw an error when version contains invalid characters', () => {
+    process.argv = ['1', '2', 'repo=my-repo', 'module=axios', 'version=^2.1.13'];
+    expect(() => getParams()).toThrowError('Version should only contain numbers and dots')
+  })
 })

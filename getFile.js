@@ -1,4 +1,4 @@
-import { owner, path, headers, acceptHeader } from './constants.js'
+import { owner, path, apiHeader, jsonAcceptHeader } from './constants.js'
 
 export async function getFile (octokit, repo) {
     try {
@@ -7,8 +7,8 @@ export async function getFile (octokit, repo) {
             repo,
             path,
             headers: {
-                ...headers,
-                ...acceptHeader,
+                ...apiHeader,
+                ...jsonAcceptHeader,
             }
         })
         

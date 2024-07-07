@@ -1,13 +1,12 @@
-import { owner, headers } from './constants.js'
+import { owner, headers, DEFAULT_BRANCH } from './constants.js'
 
 export async function getLastCommitSha (octokit, repo) {
     try {
-    // get sha of master branch
     const { data } = await octokit.request('GET /repos/{owner}/{repo}/git/matching-refs/{ref}', {
         owner,
         repo,
         headers,
-        ref: 'heads/master',
+        ref: `heads/${DEFAULT_BRANCH}`,
     })
     const { sha } = data[0].object
 

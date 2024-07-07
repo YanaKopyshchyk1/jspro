@@ -1,4 +1,4 @@
-import { owner, headers } from './constants.js'
+import { owner, headers, DEFAULT_BRANCH } from './constants.js'
 
 export async function createPullRequest ({ octokit, repo, module, version, branch }) {
     try {
@@ -8,7 +8,7 @@ export async function createPullRequest ({ octokit, repo, module, version, branc
             title: '[PR]: Update package.json',
             body: `Update package.json with ${module} version ${version}`,
             head: branch,
-            base: 'master',
+            base: DEFAULT_BRANCH,
             headers,
         })
         console.log('Creating PR status:', status)

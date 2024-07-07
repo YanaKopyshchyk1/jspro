@@ -1,4 +1,4 @@
-import { owner, path, headers } from './constants.js'
+import { owner, path, headers, committer } from './constants.js'
 
 export async function updateFile ({ octokit, repo, sha, file, branch }) {
     try {
@@ -7,10 +7,7 @@ export async function updateFile ({ octokit, repo, sha, file, branch }) {
             repo,
             path,
             message: `Update ${path} file with new package version`,
-            committer: {
-                name: 'GitHub Username',
-                email: 'github_email',
-            },
+            committer,
             content: btoa(JSON.stringify(file, null, 2)),
             headers,
             sha,
