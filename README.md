@@ -5,13 +5,13 @@ To run this project, you can follow these instructions:
 4. Install the required dependencies by running the `npm install` command.
 5. Run the script by executing the following command: 
 
-    `node index.js repo={your_repo} module={module_name} version={module_version}`,
+`node index.js repo=your_repo module=module_name version=module_version`,
 
 where
 
-    {your_repo} - repository where you want to update package.json
-    {module_name} - npm module whose version you want to upgrade
-    {module_version} - desired new version of npm module
+your_repo - repository where you want to update package.json
+module_name - npm module whose version you want to upgrade
+module_version - desired new version of npm module
 
 9. Update in `constants.js` file GitHub related constants for authentication.
 10. To run tests: `npm test`
