@@ -16,7 +16,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "octokit": "^4.0.2"
+    "octokit": "4.0.2"
   },
   "devDependencies": {
     "jest": "^29.7.0"
